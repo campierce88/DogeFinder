@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="BreedImageCollectionViewCell" reuseIdentifier="BreedImageCollectionViewCell" id="yPA-IV-XZh" customClass="BreedImageCollectionViewCell" customModule="DogeFinder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="165" height="165"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="165" height="165"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9EA-Ea-THw">
+                        <rect key="frame" x="0.0" y="0.0" width="165" height="165"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z1o-5i-iJL">
+                                <rect key="frame" x="0.0" y="0.0" width="165" height="165"/>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Z1o-5i-iJL" secondAttribute="height" multiplier="1:1" id="Jg0-0X-Ll1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Z1o-5i-iJL" firstAttribute="leading" secondItem="9EA-Ea-THw" secondAttribute="leading" id="Bh3-eH-Lqj"/>
+                            <constraint firstAttribute="trailing" secondItem="Z1o-5i-iJL" secondAttribute="trailing" id="Fc3-G3-8BD"/>
+                            <constraint firstItem="Z1o-5i-iJL" firstAttribute="top" secondItem="9EA-Ea-THw" secondAttribute="top" id="m7g-7d-89m"/>
+                            <constraint firstAttribute="bottom" secondItem="Z1o-5i-iJL" secondAttribute="bottom" id="ynz-JA-rmA"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="9EA-Ea-THw" firstAttribute="top" secondItem="yPA-IV-XZh" secondAttribute="top" id="L1Z-Up-l8z"/>
+                <constraint firstItem="9EA-Ea-THw" firstAttribute="leading" secondItem="yPA-IV-XZh" secondAttribute="leading" id="dYp-po-BkS"/>
+                <constraint firstAttribute="bottom" secondItem="9EA-Ea-THw" secondAttribute="bottom" id="l5c-R7-1uY"/>
+                <constraint firstAttribute="trailing" secondItem="9EA-Ea-THw" secondAttribute="trailing" id="tiS-Pe-7ux"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="n32-a4-a63"/>
+            <size key="customSize" width="367" height="242"/>
+            <connections>
+                <outlet property="containerView" destination="9EA-Ea-THw" id="4OZ-0m-MVv"/>
+                <outlet property="imageView" destination="Z1o-5i-iJL" id="X35-oK-Nvz"/>
+            </connections>
+            <point key="canvasLocation" x="29.5" y="113.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
