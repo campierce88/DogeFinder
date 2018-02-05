@@ -97,6 +97,8 @@ extension BreedDetailsViewController: UICollectionViewDataSource {
 extension BreedDetailsViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // Do nothing for now.
+        let alert = UIAlertController(title: "Coming Soon!", message: "Full screen image view of this cute dogo will be here before you know it!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        present(alert, animated: true)
     }
 }

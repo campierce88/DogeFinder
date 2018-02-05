@@ -19,6 +19,8 @@ class BreedsTableViewController: UIViewController {
     }
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var errorView: UIView!
+    @IBOutlet weak var retryButton: UIButton!
 
     var refreshControl: UIRefreshControl!
     var breeds = [Breed]()
@@ -48,11 +50,19 @@ class BreedsTableViewController: UIViewController {
             self.updated(breeds)
         }, failure: { (response, error) in
             self.updated([])
+            self.tableView.isHidden = true
+            self.errorView.isHidden = false
         })
     }
 
     @objc func refreshTableView(_ sender: Any) {
         breeds = []
+        loadBreeds()
+    }
+
+    @IBAction func retryPressed(_ sender: Any) {
+        tableView.isHidden = false
+        errorView.isHidden = true
         loadBreeds()
     }
 }
